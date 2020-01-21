@@ -124,7 +124,7 @@ var app = new Vue({
       if (!value) {
         return
       }
-      this.todos.push({
+      this.todos.unshift({ // <= zmiana push na unshift, dodaje elementy na początek tablicy.
         id: todoStorage.uid++,
         title: value,
         completed: false
